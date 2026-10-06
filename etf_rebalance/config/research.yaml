@@ -1,0 +1,101 @@
+# Research configuration for the reconstitution event study.
+# Sample paths point at SYNTHETIC fixtures. Replace them with licensed
+# point-in-time announcements and prices before treating any output as evidence.
+# TODO: point announcements/prices/fundamentals at real historical extracts.
+
+calendar_name: XNYS
+timezone: America/New_York
+benchmark_security_id: BENCH
+index_names:
+  - RUSSELL_2000
+primary_window: ann_to_rebalance
+# Post-rebalance windows start on the first session AFTER the effective close.
+# The rebalance session itself belongs to the pre-rebalance holding period,
+# because the strategy exits at that official close.
+windows:
+  - name: ann_to_rebalance
+    start_anchor: entry
+    start_offset: 0
+    end_anchor: rebalance
+    end_offset: 0
+  - name: ann_plus_2_to_rebalance
+    start_anchor: entry
+    start_offset: 2
+    end_anchor: rebalance
+    end_offset: 0
+  - name: ann_plus_5_to_rebalance
+    start_anchor: entry
+    start_offset: 5
+    end_anchor: rebalance
+    end_offset: 0
+  - name: reb_minus_5_to_rebalance
+    start_anchor: rebalance
+    start_offset: -5
+    end_anchor: rebalance
+    end_offset: 0
+  - name: rebalance_to_plus_1
+    start_anchor: rebalance
+    start_offset: 1
+    end_anchor: rebalance
+    end_offset: 1
+  - name: rebalance_to_plus_3
+    start_anchor: rebalance
+    start_offset: 1
+    end_anchor: rebalance
+    end_offset: 3
+  - name: rebalance_to_plus_5
+    start_anchor: rebalance
+    start_offset: 1
+    end_anchor: rebalance
+    end_offset: 5
+  - name: rebalance_to_plus_10
+    start_anchor: rebalance
+    start_offset: 1
+    end_anchor: rebalance
+    end_offset: 10
+  - name: rebalance_to_plus_20
+    start_anchor: rebalance
+    start_offset: 1
+    end_anchor: rebalance
+    end_offset: 20
+bootstrap_resamples: 1000
+bootstrap_seed: 42
+confidence_level: 0.95
+# A 10% cap with only five names saturates, so pressure weights match equal
+# weights on the synthetic sample. That is the cap binding, not a hidden bug.
+max_name_weight: 0.10
+gross_exposure_cap: 1.0
+portfolio_nav: null
+max_adv_participation: null
+entry_rule: next_regular_session_open_after_signal_known_at
+exit_rule: rebalance_effective_close
+event_dataset_version: sample-synthetic-v0
+price_dataset_version: sample-synthetic-v0
+naive_timestamps_tz: null
+portfolio_modes:
+  - long_additions
+  - short_deletions
+  - long_short
+  - long_additions_hedged
+sizing_schemes:
+  - equal
+  - pressure
+cost_scenario: base
+splits:
+  development:
+    start: 2010-01-01
+    end: 2018-12-31
+  validation:
+    start: 2019-01-01
+    end: 2021-12-31
+  out_of_sample:
+    start: 2022-01-01
+    end: 2026-12-31
+paths:
+  announcements: data/raw/russell/sample_announcements.csv
+  security_master: data/raw/russell/sample_security_master.csv
+  prices: data/raw/prices/sample_prices.csv
+  fundamentals: data/raw/russell/sample_fundamentals.csv
+  borrow: null
+  event_panel: data/processed/event_panel.parquet
+  run_dir: runs

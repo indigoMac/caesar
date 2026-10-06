@@ -1,0 +1,24 @@
+published_at,effective_close,ticker,company_name,index_name,action,version,rebalance_id,source_url,retrieved_at,data_status
+2023-05-19T17:00:00-04:00,2023-06-23,A01,Synthetic A01,RUSSELL_2000,ADD,1,2023-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-24T17:00:00-04:00,2024-06-28,A01,Synthetic A01,RUSSELL_2000,ADD,1,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2023-05-19T17:00:00-04:00,2023-06-23,A02,Synthetic A02,RUSSELL_2000,ADD,1,2023-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-24T17:00:00-04:00,2024-06-28,A02,Synthetic A02,RUSSELL_2000,ADD,1,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2023-05-19T17:00:00-04:00,2023-06-23,A03,Synthetic A03,RUSSELL_2000,ADD,1,2023-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-24T17:00:00-04:00,2024-06-28,A03,Synthetic A03,RUSSELL_2000,ADD,1,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2023-05-19T17:00:00-04:00,2023-06-23,A04,Synthetic A04,RUSSELL_2000,ADD,1,2023-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-24T17:00:00-04:00,2024-06-28,A04,Synthetic A04,RUSSELL_2000,ADD,1,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2023-05-19T17:00:00-04:00,2023-06-23,A05,Synthetic A05,RUSSELL_2000,ADD,1,2023-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-24T17:00:00-04:00,2024-06-28,A05,Synthetic A05,RUSSELL_2000,ADD,1,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2023-05-19T17:00:00-04:00,2023-06-23,D01,Synthetic D01,RUSSELL_2000,DELETE,1,2023-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-24T17:00:00-04:00,2024-06-28,D01,Synthetic D01,RUSSELL_2000,DELETE,1,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2023-05-19T17:00:00-04:00,2023-06-23,D02,Synthetic D02,RUSSELL_2000,DELETE,1,2023-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-24T17:00:00-04:00,2024-06-28,D02,Synthetic D02,RUSSELL_2000,DELETE,1,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2023-05-19T17:00:00-04:00,2023-06-23,D03,Synthetic D03,RUSSELL_2000,DELETE,1,2023-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-24T17:00:00-04:00,2024-06-28,D03,Synthetic D03,RUSSELL_2000,DELETE,1,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2023-05-19T17:00:00-04:00,2023-06-23,D04,Synthetic D04,RUSSELL_2000,DELETE,1,2023-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-24T17:00:00-04:00,2024-06-28,D04,Synthetic D04,RUSSELL_2000,DELETE,1,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2023-05-19T17:00:00-04:00,2023-06-23,D05,Synthetic D05,RUSSELL_2000,DELETE,1,2023-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-24T17:00:00-04:00,2024-06-28,D05,Synthetic D05,RUSSELL_2000,DELETE,1,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-24T17:00:00-04:00,2024-06-28,X01,Synthetic X01,RUSSELL_2000,ADD,1,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-27T18:00:00-04:00,2024-06-28,X01,Synthetic X01,RUSSELL_2000,NONE,2,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC
+2024-05-31T17:00:00-04:00,2024-06-28,A01,Synthetic A01,RUSSELL_2000,ADD,2,2024-06,https://example.invalid/synthetic-reconstitution,2024-08-15T12:00:00-04:00,SYNTHETIC

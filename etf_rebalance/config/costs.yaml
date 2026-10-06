@@ -1,0 +1,10 @@
+# One-way transaction costs in basis points.
+# Net return = gross_return - entry_cost - exit_cost.
+# These are flat scenarios, not estimated spreads. A later cost model can
+# implement the same interface with spread, impact, and borrow fees.
+
+scenarios_bps:
+  optimistic: 5
+  base: 15
+  conservative: 30
+  hostile: 50
