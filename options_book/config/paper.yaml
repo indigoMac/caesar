@@ -1,0 +1,51 @@
+# Paper Gateway on this machine. Live trading stays off in this file.
+broker:
+  host: 127.0.0.1
+  port: 4002
+  client_id: 17
+  live_enabled: false
+  submit_orders: false
+  account: ""
+
+session:
+  timezone: America/New_York
+  entry_start: "09:45"
+  entry_end: "15:45"
+  calendar: XNYS
+
+spread:
+  quantity: 1
+  target_dte: 40
+  min_dte: 30
+  max_dte: 45
+  short_delta: -0.16
+  width_points: 25
+  min_credit_points: 0.50
+  max_loss_dollars: 2500
+  profit_take_fraction: 0.50
+  close_dte: 21
+  loss_multiple_of_credit: 2.0
+  order_timeout_seconds: 180
+  scan_points_below_spot: 400
+  option_tick: 0.05
+
+# MES is $5 per index point. A one-lot SPX spread is about 1-2 MES,
+# which is a fraction of one ES ($50 per point).
+hedge:
+  symbol: MES
+  band_contracts: 1
+  min_adjustment: 1
+  max_mes_position: 10
+  greek_max_age_seconds: 5
+  tick_size: 0.25
+  max_spread_points: 1
+
+risk:
+  max_daily_loss_dollars: 2500
+  halt_file: data/HALT
+
+loop:
+  poll_seconds: 60
+
+store:
+  path: data/state.sqlite

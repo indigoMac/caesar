@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "options-book"
+version = "0.1.0"
+description = "Paper-only SPX put credit spread with a MES delta hedge"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ib_async>=2.1",
+    "pydantic>=2.6",
+    "PyYAML>=6.0",
+    "exchange-calendars>=4.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+options-book = "options_book.loop:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
